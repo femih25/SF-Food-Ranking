@@ -1,9 +1,70 @@
 body {
     font-family: Raleway;
     text-align: center;
+    background-color: lightblue;
+    margin: 0; 
 }
 
 img {
-  width: 100%;
+  width: auto;
+  height: 335px; 
   max-width: 500px;
+  border: 4px solid #555;
 }
+
+a:link, a:visited {
+    background-color: #619ad7;
+    color: blanchedalmond;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: #527daa;
+  }
+
+
+
+
+  .container {
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+  }
+  
+  .image {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    object-fit: contain;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: transparent;
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
